@@ -1,20 +1,20 @@
 import { Outlet } from "react-router-dom"
-import NavBar from './components/NavBar'
 import './App.css'
+import { useState } from "react"
+import { data } from "./data/data"
 
 function App() {
 
+  const [contacts, setContacts] = useState(data);
+
   return (
     <>
-      <header>
-        <NavBar />               
+      <header>              
       </header>
       <main>
-        <Outlet />
+        <Outlet context={[contacts, setContacts]}/>
+        
       </main>
-      <footer>
-        <h3>Super footer</h3>
-      </footer>
     </>
   )
 }

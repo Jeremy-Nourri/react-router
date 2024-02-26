@@ -1,7 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Home from "../components/Home";
-import Contact from "../components/Contact";
-import About from  "../components/About";
+import Form from "../components/Form";
 import ErrorPage from "../components/ErrorPage";
 import App from "../App";
 
@@ -13,8 +12,7 @@ const router = createBrowserRouter([
         errorElement: <ErrorPage />,
         children : [
             { path: "/", element: <Home /> },
-            { path: "/about", element: <About /> },
-            { path: "/contact", element: <Contact /> }
+            { path: "/form/:monparams", element: <Form /> }
         ]
     }
 ])

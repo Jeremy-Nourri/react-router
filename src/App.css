@@ -1,0 +1,18 @@
+nav {
+  text-align: center;
+  margin-left: 1rem;
+
+  & .link {
+    display: inline-block;
+    margin-left: 1rem;
+  }
+}
+
+main {
+  height: 80vh;
+}
+
+h2, h3 {
+  text-align: center;
+}
+
